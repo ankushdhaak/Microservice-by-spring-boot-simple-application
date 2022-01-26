@@ -1,0 +1,22 @@
+package com.department.entity;
+
+public class Contact {
+		
+		private Long departmentId;
+		private String email;
+		private String departmentName;
+		private Long employeeId;
+		public Contact(Long departmentId;, String email, String departmentName, Long employeeId) {
+			super();
+			this.departmentId = departmentId;
+			this.email = email;
+			this.departmentName = departmentName;
+			this.employeeId = employeeId;
+		}
+		public Department() {
+			super();
+			// TODO Auto-generated constructor stub
+		}
+		//getter and setter and toString method
+
+}

@@ -1,0 +1,23 @@
+package com.department.service;
+
+import java.util.List;
+import java.util.stream.Collectors;
+
+import org.springframework.stereotype.Service;
+
+import com.department.entity.Department;
+
+@Service
+public class DepartmentServiceImpl implements DepartmentService {
+
+	List<Department> departmentList = List.of(
+			new Department(123L, "abc@gmail.com","Sandeep" , 1311L),
+			new Department(1234L, "abc@gmail.com","Sandeep" , 1311L)
+			);
+	@Override
+	public List<Department> getDepartment(Long employeeId) {
+		// TODO Auto-generated method stub
+		return this.departmentList.stream().filter(department -> department.getEmployeeId().equals(employeeId)).collect(Collectors.toList());
+	}
+
+}
